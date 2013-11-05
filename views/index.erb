@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Bookmark Manager</title>
+	</head>
+	<body>
+		<header>
+		<h1>
+			Bookmark Manager
+		</h1>
+		<nav>
+			<ul>
+				<li>
+					<a href="/addlink">Add Link</a>
+				</li>
+				<li>
+					<a href="/signup">Sign Up</a>
+				</li>
+				<li>
+					<a href="/signin">Sign In</a>
+				</li>
+			</ul>
+		</nav>
+		<ul>
+  		<% @links.each do |link| %>
+    		<li><a href="<%= link.url %>"><%= link.title %></a></li>
+  		<% end %>
+		</ul>
+
+		</header>
+
+	</body>
+</html>
