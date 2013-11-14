@@ -4,7 +4,7 @@ class User
 	include DataMapper::Resource
 
 		property :id, Serial
-		property :email, String, :unique => true, :message => "This email is already taken"
+		property :email, String, :unique => true, :message => "This email has already been used"
 		property :password_digest, Text
 
 		attr_reader :password

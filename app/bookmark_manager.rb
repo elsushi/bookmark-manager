@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require 'sinatra/partial'
 require 'rack-flash'
 require_relative 'server'
 # require_relative 'helpers/application'
@@ -9,6 +10,8 @@ class BookmarkManager < Sinatra::Base
 	enable :sessions
   use Rack::Flash
   use Rack::MethodOverride
+  register Sinatra::Partial
+  set :partial_template_engine, :erb
 
   get '/' do
     @links = Link.all
@@ -41,6 +44,12 @@ class BookmarkManager < Sinatra::Base
       flash[:errors] = ["The email or password are incorrect"]
       erb :"sessions/new"
     end
+  end
+
+  post '/sessions/recover' do 
+    email = params[:email]
+    User
+
   end
 
   delete '/sessions' do
