@@ -12,13 +12,7 @@
 		<nav>
 			<ul>
 				<li>
-					<a href="/addlink">Add Link</a>
-				</li>
-				<li>
-					<a href="/users/new">Sign Up</a>
-				</li>
-				<li>
-					<a href="/sessions/new">Sign In</a>
+					<a href="/links/new">Add Link</a>
 				</li>
 			</ul>
 		</nav>
@@ -27,13 +21,6 @@
     		<li><a href="<%= link.url %>"><%= link.title %></a></li>
   		<% end %>
 		</ul>
-		<div id="new-link">
-			<form action="/links" method="post">
-				Url: <input type="text" name="url">
-				Title: <input type="text" name="title">
-				Tags: <input type="text" name ="tags">
-				<input type="submit" value="Add link">
-			</form> 
-		</div>
+		
 	</body>
 </html>

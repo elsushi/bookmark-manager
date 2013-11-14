@@ -70,6 +70,10 @@ class BookmarkManager < Sinatra::Base
   	redirect to('/')
   end
 
+  get '/links/new' do
+    erb :"links/new"
+  end
+
   post '/users' do 
   	@user = User.new(:email => params[:email],
   										 :password => params[:password],
