@@ -3,6 +3,9 @@ body {
   background-image: url(/images/cutcube.png)
 }
 
+a {text-decoration: none;
+	color: #b77843;}
+
 a.button {
   display: inline-block; /* display inline but have dimensions */
   width: 80px;
@@ -16,6 +19,10 @@ a.button {
   margin-left: 5px;
   margin-right: 5px;
   text-shadow: 0 0 2px rgba(0,0,0, 0.4); /*for readability*/
+}
+
+a.button.highlighted {
+	background-color: #b77843;
 }
 
 header {  
@@ -34,8 +41,58 @@ header {
     display: flex;      
   }
 
+  header a {
+  	color: white;
+  	text-decoration: none;
+  }
+
   header #user-links {
     flex: 1; /* http://learnlayout.com/flexbox.html */
     -webkit-flex: 1;
     text-align: right;  
   }
+
+#links-container {
+	background-color: white;
+	margin: 40px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.4);
+	padding: 10px;
+}
+
+.link {
+	background-color: #EEE;
+	box-shadow: 0 0 5px rgba(0,0,0,0.4);
+	margin: 10px inherit;
+	padding: 15px 10px;
+}
+
+.link a.title {
+	letter-spacing: 1px;
+}
+
+.link .description {
+	margin: 10px inherit;
+}
+
+.link .source {
+	float: right;
+	font-size: 12px;
+}
+
+footer {
+	display: flex;
+	background-color: rgba(0,0,0,0.2);
+}
+
+footer img {
+	vertical-align: top;
+}
+
+footer #technologies {
+	-webkit-flex: 1;
+	flex: 1;
+}
+
+footer p {
+	padding: 5px 25px;
+}

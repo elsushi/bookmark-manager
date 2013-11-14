@@ -3,24 +3,13 @@
 		<title>Bookmark Manager</title>
 	</head>
 	<body>
-		<header>
-		<%= partial :header %>
-  	</header>
-		<h1>
-			Bookmark Manager
-		</h1>
-		<nav>
-			<ul>
-				<li>
-					<a href="/links/new">Add Link</a>
-				</li>
-			</ul>
-		</nav>
-		<ul>
-  		<% @links.each do |link| %>
-    		<li><a href="<%= link.url %>"><%= link.title %></a></li>
-  		<% end %>
+	
+  	<div id='links-container'>
+  		<ul id='links'>
+		 		<% @links.each do |link| %>
+		 			<%= partial :link, :locals => {:link => link} %>
+		 			<% end %>
 		</ul>
-		
+		</div>
 	</body>
 </html>
