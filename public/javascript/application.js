@@ -1,6 +1,7 @@
 function addFavouritesHandler() {
 	$('.star.solid').click(function() {
-		$(this).animate({opacity: 1}, 1000);
+		var newOpacity = 1 - parseInt($(this).css('opacity'), 10);
+	$(this).animate({opacity: newOpacity}, 1000);
 	});
 }
 
