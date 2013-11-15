@@ -108,11 +108,25 @@ header {
 }
 
 .link {
+  position: relative;
   background-color: #EEE;
   box-shadow: 0 0 5px rgba(0,0,0,0.4);
   margin: 10px inherit;
   padding: 15px 10px;
-  display: none;
+  position: relative;
+}
+
+.link .star {
+  position: absolute;
+  font-size: 24px;
+  right: 5px;
+  top: 5px;
+  color: yellowgreen;
+  cursor: pointer;
+}
+
+.link .star.solid {
+  opacity: 0;
 }
 
   .link a.title {
