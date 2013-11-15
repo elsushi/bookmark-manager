@@ -5,8 +5,8 @@
   <link rel="stylesheet" type="text/css" href="/stylesheets/application.css">  
 </head>
 <body>
+  <div class="wrapper">
   <%= partial :header %>
-
   
 	<% if current_user %>
     <form method="post" action="/sessions">
@@ -15,21 +15,23 @@
     </form>
   <% end %>
   <% if flash[:notice] %>
-  	<div id="notice">
+  	<div class='flash-notice'>
   		<%= flash[:notice] %>
   	 </div>
   	<% end %>
   <% if flash[:errors] && !flash[:errors].empty? %>
-    Sorry, there were the following problems with the form.
-    <ul id="errors">
+    <ul>
   	 <% flash[:errors].each do |error| %>
-  	   <li><%= error %></li>
+  	   <li class='flash error'><%= error %></li>
   	 <% end %>
     </ul>	
 	<% end %>
   <%= yield %>
   <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
   <script src="/javascript/application.js"></script>
+  <div class="push"></div>
+  <div class="footer">
   <%= partial :footer %>
+  </div>
 </body>
 </html>

@@ -1,12 +1,21 @@
 <h1>Please sign in</h1>
 
 <form method="post" action="/sessions">
-	Email: <input type="text" name='email'>
-	Password: <input type="password" name='password'>
-	<input type="submit" value="Sign in">
-</form>
+	<p>
+     <input type="text" name='email' placeholder="Email address">
+   </p>
+   <p>
+     <input type="password" name='password' placeholder="Password">
+   </p>
+   <p>
+     <input type="submit" value="Sign in" class="button">
+ 		</p>
+	
 <h2>Forgot your password?</h2>
 <form method="post" action="/sessions/recover">
-	Email: <input type="text" name='password_recovery'>
-	<input type="submit" value="Recover password">
+	<p>
+		<input type="text" name='passwordRecovery' placeholder="Email">
+	</p>
+	<p>
+		<input type="submit" value="Recover password" class="button">
 </form>
