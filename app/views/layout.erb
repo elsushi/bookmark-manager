@@ -14,6 +14,7 @@
     
     </form>
   <% end %>
+  <div id="flash-container">
   <% if flash[:notice] %>
   	<div class='flash-notice'>
   		<%= flash[:notice] %>
@@ -26,6 +27,7 @@
   	 <% end %>
     </ul>	
 	<% end %>
+  </div>
   <%= yield %>
   <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
   <script src="/javascript/application.js"></script>
